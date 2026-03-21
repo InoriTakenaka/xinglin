@@ -1,0 +1,81 @@
+<Window x:Class="xinglin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xinglin"
+        xmlns:views="clr-namespace:xinglin.Views"
+        mc:Ignorable="d"
+        Title="模板编辑器和录入查看工具"
+        Height="600"
+        Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 菜单栏 -->
+        <Menu Grid.Row="0">
+            <MenuItem Header="文件">
+                <MenuItem Header="新建模板" Click="NewTemplate_Click"/>
+                <MenuItem Header="打开模板" Click="OpenTemplate_Click"/>
+                <MenuItem Header="保存" Click="Save_Click"/>
+                <Separator/>
+                <MenuItem Header="退出" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="编辑">
+                <MenuItem Header="模板编辑器" Click="TemplateEditor_Click"/>
+                <MenuItem Header="数据录入" Click="DataEntry_Click"/>
+            </MenuItem>
+            <MenuItem Header="查看">
+                <MenuItem Header="模板查看器" Click="TemplateViewer_Click"/>
+                <MenuItem Header="报告预览" Click="ReportPreview_Click"/>
+            </MenuItem>
+            <MenuItem Header="帮助">
+                <MenuItem Header="关于" Click="About_Click"/>
+            </MenuItem>
+        </Menu>
+        
+        <!-- 工具栏 -->
+        <ToolBar Grid.Row="1" Background="{StaticResource PrimaryBrush}">
+            <Button Content="新建模板" Click="NewTemplate_Click"/>
+            <Button Content="模板编辑器" Click="TemplateEditor_Click"/>
+            <Button Content="数据录入" Click="DataEntry_Click"/>
+            <Button Content="模板查看器" Click="TemplateViewer_Click"/>
+        </ToolBar>
+        
+        <!-- 内容区域 -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- 左侧模板树 -->
+            <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="0,0,1,0">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="模板树" FontWeight="Bold" Margin="10"/>
+                    <TreeView x:Name="TemplateTreeView" Margin="5" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                                <TextBlock Text="{Binding Name}"/>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                    </TreeView>
+                </DockPanel>
+            </Border>
+            
+            <!-- 右侧Tab控件 -->
+            <TabControl Grid.Column="1" x:Name="TabControl">
+                <TabItem Header="模板编辑器" x:Name="TemplateEditorTab">
+                    <!-- 模板编辑器视图将在这里动态添加 -->
+                </TabItem>
+                <TabItem Header="数据录入" x:Name="DataEntryTab">
+                    <!-- 数据录入视图将在这里动态添加 -->
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>

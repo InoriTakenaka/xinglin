@@ -1,0 +1,33 @@
+<UserControl x:Class="xinglin.Views.ToolboxView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:xinglin.Views"
+             xmlns:vm="clr-namespace:xinglin.ViewModels"
+             xmlns:models="clr-namespace:xinglin.Models.CoreEntities"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="200">
+    <UserControl.DataContext>
+        <vm:ToolboxViewModel />
+    </UserControl.DataContext>
+    <Grid Background="#F5F5F5">
+        <StackPanel>
+            <TextBlock Text="工具箱" FontWeight="Bold" Margin="10"/>
+            <ItemsControl ItemsSource="{Binding AvailableControls}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type models:ControlType}">
+                        <Border Margin="5" Padding="10" Background="#E0E0E0" 
+                                BorderBrush="#CCCCCC" BorderThickness="1" 
+                                CornerRadius="4" Cursor="Hand"
+                                MouseDown="Button_MouseDown"
+                                Tag="{Binding}">
+                            <TextBlock Text="{Binding}" HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center" FontWeight="Medium"/>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</UserControl>

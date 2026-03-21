@@ -1,0 +1,60 @@
+{
+  "TemplateId": "a5-vertical-template",
+  "Name": "A5竖向模板",
+  "Description": "A5竖向纸张大小的模板，适合小型文档",
+  "Layout": {
+    "PaperType": "A5",
+    "IsLandscape": false,
+    "PaperWidth": 148,
+    "PaperHeight": 210,
+    "MarginLeft": 8,
+    "MarginRight": 8,
+    "MarginTop": 8,
+    "MarginBottom": 8,
+    "FixedElements": [
+      {
+        "ElementId": "a5-title",
+        "Type": 0,
+        "DisplayName": "标题",
+        "Text": "A5文档",
+        "X": 8,
+        "Y": 8,
+        "Width": 132,
+        "Height": 15,
+        "FontFamily": "Microsoft YaHei",
+        "FontSize": 14,
+        "IsBold": true
+      },
+      {
+        "ElementId": "a5-line",
+        "Type": 16,
+        "X": 8,
+        "Y": 28,
+        "Width": 132,
+        "Height": 1
+      }
+    ],
+    "EditableElements": [
+      {
+        "ElementId": "a5-content",
+        "Type": 1,
+        "DisplayName": "内容",
+        "Text": "",
+        "X": 8,
+        "Y": 35,
+        "Width": 132,
+        "Height": 150,
+        "BindingPath": "Content",
+        "FontFamily": "Microsoft YaHei",
+        "FontSize": 12
+      }
+    ]
+  },
+  "Config": {},
+  "CreatedDate": "2026-03-10T00:00:00",
+  "ModifiedDate": "2026-03-10T00:00:00",
+  "ParentId": null,
+  "ChildTemplateIds": [],
+  "EditorState": 0,
+  "Version": "1.0"
+}

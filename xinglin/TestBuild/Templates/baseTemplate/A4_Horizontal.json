@@ -1,0 +1,24 @@
+{
+  "TemplateId": "a4-horizontal-default",
+  "Name": "A4横向默认模板",
+  "Description": "A4横向纸张大小的默认模板",
+  "Layout": {
+    "PaperType": "A4",
+    "IsLandscape": true,
+    "PaperWidth": 297,
+    "PaperHeight": 210,
+    "MarginLeft": 10,
+    "MarginRight": 10,
+    "MarginTop": 10,
+    "MarginBottom": 10,
+    "FixedElements": [],
+    "EditableElements": []
+  },
+  "Config": {},
+  "CreatedDate": "2026-02-15T00:00:00",
+  "ModifiedDate": "2026-02-15T00:00:00",
+  "ParentId": null,
+  "ChildTemplateIds": [],
+  "EditorState": 0,
+  "Version": "1.0"
+}

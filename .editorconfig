@@ -1,0 +1,38 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = crlf
+insert_final_newline = true
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.{cs,json,xml,xaml}]
+charset = utf-8
+
+# C# files
+[*.cs]
+indent_style = space
+indent_size = 4
+
+# Use 4 spaces for indentation in XML files
+[*.xml]
+indent_style = space
+indent_size = 4
+
+# Use 4 spaces for indentation in XAML files
+[*.xaml]
+indent_style = space
+indent_size = 4
+
+# Use 2 spaces for indentation in JSON files
+[*.json]
+indent_style = space
+indent_size = 2
+
+# Trim trailing whitespace
+[*]
+trim_trailing_whitespace = true

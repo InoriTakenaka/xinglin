@@ -1,0 +1,12 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:utils="clr-namespace:xinglin.Utils"
+                    xmlns:local="clr-namespace:xinglin.Views">
+
+    <!-- 值转换器 -->
+    <utils:BoolToBrushConverter x:Key="BoolToBrushConverter"/>
+    <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter"/>
+    <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    <local:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+
+</ResourceDictionary>
