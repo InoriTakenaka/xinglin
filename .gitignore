@@ -1,0 +1,42 @@
+# Build outputs
+bin/
+obj/
+TestBuild/
+
+# Visual Studio generated files
+.vs/
+*.suo
+*.user
+*.csproj.user
+*.sln.docstates
+
+# Log files
+*.log
+pres_out.txt
+preservation_test_output.txt
+test-output.txt
+
+# NuGet packages
+packages/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+.DS_Store
+
+# Resharper
+_ReSharper*
+*.ReSharper*
+
+# Rider
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
